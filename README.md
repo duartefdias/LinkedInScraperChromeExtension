@@ -1,4 +1,4 @@
-A Chrome browser extension to capture data from LinkedIn.
+A React/Typescript Chrome browser extension to capture data from LinkedIn.
 
 ## Steps to run this extension locally
 
