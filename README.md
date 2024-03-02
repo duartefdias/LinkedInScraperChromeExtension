@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+A Chrome browser extension to capture data from LinkedIn.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Steps to run this extension locally
 
-## Available Scripts
+1. Clone the repo
 
-In the project directory, you can run:
+```
+git clone https://github.com/duartefdias/LinkedInScraperChromeExtension.git
+```
 
-### `npm start`
+2. Navigate to directory
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+cd LinkedInScraperChromeExtension
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. Install dependencies
 
-### `npm test`
+```
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Build the extension (converts the react code into a production build inside a new folder "dist")
 
-### `npm run build`
+```
+npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5. In your browser, navigate to [chrome://extensions/](chrome://extensions/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6. Enable "Developer mode" on the top righ corner
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+7. Click on "Load unpacked" and select the "dist" folder
 
-### `npm run eject`
+The extension should now appear in your browser's list of extensions :)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Making changes to the extension
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you are interested in playing with the extension's code and seeing the changes reflect locally, here is the dev loop:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Make changes to the code
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. ```npm run build```
 
-## Learn More
+3. Reload the extension in [chrome://extensions/](chrome://extensions/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Note
+ React components live in the extension context, meaning that if you console.log in a react component, you'll need to right click on the extension panel and do inspect->console to view the output.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ You'll need to leverage the [chrome api](https://developer.chrome.com/docs/extensions/reference/api) to access the current tab in the browser. And example of doing this is via the chrome.scripting.executeScript method in this codebase.
+
+To learn more about developing extensions for Chrome, make sure to follow their [get started guides](https://developer.chrome.com/docs/extensions/get-started).
