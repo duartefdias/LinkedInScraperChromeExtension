@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Basic Data Extractor",
+    "description": "Extracts basic data from LinkedIn profiles",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "action": {
+      "default_popup": "js/index.html",
+      "default_icon": {
+        "16": "images/robot-16.png",
+        "32": "images/robot-32.png",
+        "48": "images/robot-64.png",
+        "128": "images/robot-128.png"
+        }
+    },
+    "icons": {
+        "16": "images/robot-16.png",
+        "32": "images/robot-32.png",
+        "48": "images/robot-64.png",
+        "128": "images/robot-128.png"
+    }
+}
