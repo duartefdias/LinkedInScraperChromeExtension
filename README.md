@@ -26,7 +26,7 @@ npm install
 npm run build
 ```
 
-5. In your browser, navigate to [chrome://extensions/](chrome://extensions/)
+5. In your browser, navigate to ```chrome://extensions/```
 
 6. Enable "Developer mode" on the top righ corner
 
@@ -42,7 +42,7 @@ If you are interested in playing with the extension's code and seeing the change
 
 2. ```npm run build```
 
-3. Reload the extension in [chrome://extensions/](chrome://extensions/)
+3. Reload the extension in ```chrome://extensions/```
 
 ### Note
  React components live in the extension context, meaning that if you console.log in a react component, you'll need to right click on the extension panel and do inspect->console to view the output.
